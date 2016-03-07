@@ -1,0 +1,68 @@
+<HTML>
+	<HEAD>
+	<TITLE>GeoWing's Dumbarton Project</TITLE>
+	</HEAD>
+<BODY>
+
+<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js"></script>
+<div id="map" style="width:600px;height:500px;"></div>
+
+<script>
+var f = document.createElement("link");
+f.setAttribute("rel", "stylesheet");
+f.setAttribute("type", "text/css");
+f.setAttribute("href", "http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.css");
+if (typeof f !== "undefined")  document.head.appendChild(f);
+	
+var map = new L.amigo.map("map",{amigoLogo: "right"});
+L.amigo.auth.setToken("A:e59AoMkCf9ouBYJioo5BGEivDINFhaBMR5haTK"); //my Token
+
+filepath  = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/datasets/"
+fp_raster = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/raster_datasets/"
+
+//entire layers:
+/// https://www.amigocloud.com/dashboard/index.html#/project-dashboard/12486/raster-datasets/68867?zoom=17&lat=37.48270&lng=-122.13753&vlayer=68867&vlayer=68790&vlayer=68857&vlayer=68858&blayer=Default
+//dumbarton_merged (layer_68717)
+//map.addDatasetLayer({url: filepath + "68717",popup: {popupTitle: "name",displayFields: ["name"]}});
+//Tiles (layer_68757)
+//map.addDatasetLayer({url: filepath + "68757",popup: {popupTitle: "tilenum",displayFields: ["tilenum"]}});
+
+
+// raster sample C36: 68868
+map.addDatasetLayer({url: fp_raster + "68868"});
+
+//Rail (layer_68788)
+map.addDatasetLayer({url: filepath + "68788",popup: {popupTitle: "name",displayFields: ["name"]}});
+//Bridge (layer_68789)
+map.addDatasetLayer({url: filepath + "68789"});
+//Culvert (layer_68790)
+map.addDatasetLayer({url: filepath + "68790"});
+//Water poygon (layer_68799)
+map.addDatasetLayer({url: filepath + "68799"});
+//Waterline (layer_68800)
+map.addDatasetLayer({url: filepath + "68800"});
+//Vegetation (layer_68802)
+map.addDatasetLayer({url: filepath + "68802"});
+//Trail (layer_68798)
+map.addDatasetLayer({url: filepath + "68798"});
+//Building and Awning (layer_68810)
+map.addDatasetLayer({url: filepath + "68810"});
+//Concrete and Asphalt Surfaces (layer_68882)
+map.addDatasetLayer({url: filepath + "68882"});
+//Fence (layer_68880)
+map.addDatasetLayer({url: filepath + "68880"});
+//Road Barriers (layer_68881)
+map.addDatasetLayer({url: filepath + "68881"});
+//Roads (layer_68879)
+map.addDatasetLayer({url: filepath + "68879"});
+
+
+map.fitBounds([[37.477059191849,-122.192369770016],[37.482294852051,-122.174278567137]]);
+setTimeout(function () {
+	document.querySelectorAll(".leaflet-control-layers-overlays .leaflet-control-layers-selector")[0].click();}, 500);
+</script>
+
+</script>
+</BODY>
+
+</HTML>
