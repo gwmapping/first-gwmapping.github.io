@@ -4,9 +4,11 @@
 	</HEAD>
 <BODY>
 
-<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js"></script>
-//<div id="map" style="width:600px;height:500px;"></div>
-<div id="map" style="height:100vh;"></div>
+<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js">
+	////<div id="map" style="width:600px;height:500px;"></div>
+</script>
+
+<div id="map" style="height:90vh;"></div>
 
 <script>
 var f = document.createElement("link");
@@ -33,7 +35,7 @@ fp_raster = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/raster_
 map.addDatasetLayer({url: fp_raster + "68868"});
 
 //Rail (layer_68788)
-map.addDatasetLayer({url: filepath + "68788",popup: {popupTitle: "name",displayFields: ["name"]}});
+map.addDatasetLayer({url: filepath + "68788"});
 //Bridge (layer_68789)
 map.addDatasetLayer({url: filepath + "68789"});
 //Culvert (layer_68790)
@@ -57,7 +59,8 @@ map.addDatasetLayer({url: filepath + "68881"});
 //Roads (layer_68879)
 map.addDatasetLayer({url: filepath + "68879"});
 //Boundary 68891
-map.addDatasetLayer({url: filepath + "68891"});
+map.addDatasetLayer({url: filepath + "68891"}); //,popup: {popupTitle: "name",displayFields: ["name"]}});
+
 
 map.fitBounds([[37.472190 ,-122.212519],[37.484303,-122.132114 ]]);
 setTimeout(function () {
