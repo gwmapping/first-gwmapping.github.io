@@ -4,7 +4,10 @@
 	</HEAD>
 <BODY>
 
-<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js">
+
+<script src="http://gwmapping.github.io/amigocloud-1.0.4.js">
+    ////removed original amigo.js  
+    //<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js">
 	////<div id="map" style="width:600px;height:500px;"></div>
 </script>
 
@@ -32,37 +35,41 @@ fp_raster = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/raster_
 
 
 // raster sample C36: 68868
-map.addDatasetLayer({url: fp_raster + "68868"});
+//map.addDatasetLayer({url: fp_raster + "68868"});
+//map.addDatasetLayer({url: fp_raster + "69014"});
+map.addDatasetLayer({url: fp_raster + "69046"});
 
-//Rail (layer_68788)
-map.addDatasetLayer({url: filepath + "68788"});
-//Bridge (layer_68789)
-map.addDatasetLayer({url: filepath + "68789"});
-//Culvert (layer_68790)
-map.addDatasetLayer({url: filepath + "68790"});
-//Water poygon (layer_68799)
-map.addDatasetLayer({url: filepath + "68799"});
-//Waterline (layer_68800)
-map.addDatasetLayer({url: filepath + "68800"});
-//Vegetation (layer_68802)
-map.addDatasetLayer({url: filepath + "68802"});
-//Trail (layer_68798)
-map.addDatasetLayer({url: filepath + "68798"});
-//Building and Awning (layer_68810)
-map.addDatasetLayer({url: filepath + "68810"});
-//Concrete and Asphalt Surfaces (layer_68882)
-map.addDatasetLayer({url: filepath + "68882"});
-//Fence (layer_68880)
-map.addDatasetLayer({url: filepath + "68880"});
-//Road Barriers (layer_68881)
-map.addDatasetLayer({url: filepath + "68881"});
-//Roads (layer_68879)
-map.addDatasetLayer({url: filepath + "68879"});
-//Boundary 68891
-map.addDatasetLayer({url: filepath + "68891"}); //,popup: {popupTitle: "name",displayFields: ["name"]}});
+// //Rail (layer_68788)
+// map.addDatasetLayer({url: filepath + "68788"});
+// //Bridge (layer_68789)
+// map.addDatasetLayer({url: filepath + "68789"});
+// //Culvert (layer_68790)
+// map.addDatasetLayer({url: filepath + "68790"});
+// //Water poygon (layer_68799)
+// map.addDatasetLayer({url: filepath + "68799"});
+// //Waterline (layer_68800)
+// map.addDatasetLayer({url: filepath + "68800"});
+// //Vegetation (layer_68802)
+// map.addDatasetLayer({url: filepath + "68802"});
+// //Trail (layer_68798)
+// map.addDatasetLayer({url: filepath + "68798"});
+// //Building and Awning (layer_68810)
+// map.addDatasetLayer({url: filepath + "68810"});
+// //Concrete and Asphalt Surfaces (layer_68882)
+// map.addDatasetLayer({url: filepath + "68882"});
+// //Fence (layer_68880)
+// map.addDatasetLayer({url: filepath + "68880"});
+// //Road Barriers (layer_68881)
+// map.addDatasetLayer({url: filepath + "68881"});
+// //Roads (layer_68879)
+// map.addDatasetLayer({url: filepath + "68879"});
+// //Boundary 68891
+// map.addDatasetLayer({url: filepath + "68891"}); //,popup: {popupTitle: "name",displayFields: ["name"]}});
+// //Merged F2425  69019
+map.addDatasetLayer({url: filepath + "69019"});
 
 
-map.fitBounds([[37.472190 ,-122.212519],[37.484303,-122.132114 ]]);
+map.fitBounds([[37.4777 ,-122.174371],[37.480,-122.168294 ]]);
 setTimeout(function () {
 	document.querySelectorAll(".leaflet-control-layers-overlays .leaflet-control-layers-selector")[0].click();}, 500);
 </script>
