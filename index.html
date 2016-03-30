@@ -5,10 +5,6 @@
 <BODY>
 	
 <script src="http://gwmapping.github.io/amigocloud-1.0.4.js">
-    ////removed original amigo.js  
-    //<script src="http://www.amigocloud.com/static/amigocloud-1.0.4/amigocloud-1.0.4.js">
-    //<script src="http://gwmapping.github.io/amigocloud-1.0.4.js">
-	////<div id="map" style="width:600px;height:500px;"></div>
 </script>
 
 <div id="map" style="height:90vh;"></div>
@@ -21,55 +17,16 @@ f.setAttribute("href", "http://www.amigocloud.com/static/amigocloud-1.0.4/amigoc
 if (typeof f !== "undefined")  document.head.appendChild(f);
 	
 var map = new L.amigo.map("map",{amigoLogo: "right"});
-L.amigo.auth.setToken("A:e59AoMkCf9ouBYJioo5BGEivDINFhaBMR5haTK"); //my Token
 
+L.amigo.auth.setToken("A:e59AoMkCf9ouBYJioo5BGEivDINFhaBMR5haTK"); //my Token
 filepath  = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/datasets/"
 fp_raster = "https://www.amigocloud.com/api/v1/users/1796/projects/12486/raster_datasets/"
 
-//entire layers:
-/// https://www.amigocloud.com/dashboard/index.html#/project-dashboard/12486/raster-datasets/68867?zoom=17&lat=37.48270&lng=-122.13753&vlayer=68867&vlayer=68790&vlayer=68857&vlayer=68858&blayer=Default
-//dumbarton_merged (layer_68717)
-//map.addDatasetLayer({url: filepath + "68717",popup: {popupTitle: "name",displayFields: ["name"]}});
-//Tiles (layer_68757)
-//map.addDatasetLayer({url: filepath + "68757",popup: {popupTitle: "tilenum",displayFields: ["tilenum"]}});
+map.addDatasetLayer({url: fp_raster + "69062"});
 
+map.addDatasetLayer({url: "gwmapping.github.io/F2425_WGS84_reclipped_translated_nodata0.zip"})
 
-// raster sample C36: 68868
-//map.addDatasetLayer({url: fp_raster + "68868"});
-//map.addDatasetLayer({url: fp_raster + "69014"});
-map.addDatasetLayer({url: fp_raster + "69046"});
-map.addDatasetLayer({url: fp_raster + "69052"});
-
-// //Rail (layer_68788)
-// map.addDatasetLayer({url: filepath + "68788"});
-// //Bridge (layer_68789)
-// map.addDatasetLayer({url: filepath + "68789"});
-// //Culvert (layer_68790)
-// map.addDatasetLayer({url: filepath + "68790"});
-// //Water poygon (layer_68799)
-// map.addDatasetLayer({url: filepath + "68799"});
-// //Waterline (layer_68800)
-// map.addDatasetLayer({url: filepath + "68800"});
-// //Vegetation (layer_68802)
-// map.addDatasetLayer({url: filepath + "68802"});
-// //Trail (layer_68798)
-// map.addDatasetLayer({url: filepath + "68798"});
-// //Building and Awning (layer_68810)
-// map.addDatasetLayer({url: filepath + "68810"});
-// //Concrete and Asphalt Surfaces (layer_68882)
-// map.addDatasetLayer({url: filepath + "68882"});
-// //Fence (layer_68880)
-// map.addDatasetLayer({url: filepath + "68880"});
-// //Road Barriers (layer_68881)
-// map.addDatasetLayer({url: filepath + "68881"});
-// //Roads (layer_68879)
-// map.addDatasetLayer({url: filepath + "68879"});
-// //Boundary 68891
-// map.addDatasetLayer({url: filepath + "68891"}); //,popup: {popupTitle: "name",displayFields: ["name"]}});
-// //Merged F2425  69019
 map.addDatasetLayer({url: filepath + "69047"});
-
-
 map.fitBounds([[37.4777 ,-122.174371],[37.480,-122.168294 ]]);
 setTimeout(function () {
 	document.querySelectorAll(".leaflet-control-layers-overlays .leaflet-control-layers-selector")[0].click();}, 500);
