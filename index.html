@@ -45,10 +45,7 @@
         }).fitBounds([[37.4768205371,-122.174377987],[37.480020366,-122.168743393]]);
         var hash = new L.Hash(map);
         var feature_group = new L.featureGroup([]);
-        
-        var mapquestAerialUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg';
-        var mapaerial = new L.tileLayer(mapquestAerialUrl, {maxZoom: zoomax, subdomains:'1234'});
-        map.addLayer(mapaerial);
+
         
         var raster_group = new L.LayerGroup([]);
         layerControl = L.control.layers({},{},{collapsed:false});
@@ -217,9 +214,7 @@
         feature_group.addLayer(json_Features1JSON);
         raster_group.addTo(map);
         feature_group.addTo(map);
-        //var baseMaps = {};
-        var baseMaps = {"Map Quest Aerial": mapaerial};
-        //L.control.layers(baseLayers, overlays).addTo(map);
+        var baseMaps = {};
 
 
         L.control.layers(baseMaps,{'Features<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_.png" /> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_CurbImpervious.png" /> Curb_Impervious<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_CurbRoad.png" /> Curb_Road<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Fence.png" /> Fence<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Gutter.png" /> Gutter<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Imperviousconcrete.png" /> Impervious_concrete<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Imperviuosasphalt.png" /> Imperviuos_asphalt<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Rail.png" /> Rail<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_RetainingWall.png" /> Retaining_Wall<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Roadbarrier.png" /> Road_barrier<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Roadpaved.png" /> Road_paved<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="legend/Features1_Trail.png" /> Trail<br />': json_Features1JSON,"Ortho_Imagery": overlay_OrthoImagery0,},{collapsed:false}).addTo(map);
@@ -231,3 +226,4 @@
         </script>
     </body>
 </html>
+{\rtf1}
