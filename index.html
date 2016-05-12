@@ -212,8 +212,14 @@
             style: doStyleFeatures1
         });
         feature_group.addLayer(json_Features1JSON);
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
         raster_group.addTo(map);
         feature_group.addTo(map);
+
         var baseMaps = {};
 
 
